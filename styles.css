@@ -1,9 +1,13 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-image: url(' C:\Users\1rsal\OneDrive\Bilder\Saved Pictures>'); /* URL of the image */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Optional: makes the background fixed during scroll */
+    font-family: 'Arial', sans-serif;
+    color: #333;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
 }
 
 header {
