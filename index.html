@@ -1,54 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SalvenR 3D Printing</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SALVENR intelligent steam-curing control for precast concrete. Explore the system, run an interactive curing demo and download the Android companion app.">
+  <meta name="theme-color" content="#070a08">
+  <title>SALVENR | Intelligent Concrete Curing Control</title>
+  <link rel="icon" href="assets/salvenr-logo.png">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to SalvenR 3D Printing</h1>
-        <nav>
-            <ul>
-                <li><a href="#introduction">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="page-noise" aria-hidden="true"></div>
 
-    <section id="introduction">
-        <h2>Introduction</h2>
-        <p>We specialize in selling both models and design works for industrial and private operations.</p>
-    </section>
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="SALVENR home">
+        <img src="assets/salvenr-logo.png" alt="SALVENR logo">
+        <span><strong>SALVENR</strong><small>CURING CONTROL SYSTEM</small></span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#product">Product</a>
+        <a href="#demo">Live Demo</a>
+        <a href="#use-cases">Use Cases</a>
+        <a href="#app">Android App</a>
+        <a href="#specs">Specifications</a>
+        <a class="nav-cta" href="#contact">Request a Demo</a>
+      </nav>
+    </div>
+  </header>
 
-    <section id="gallery">
-        <h2>Product Gallery</h2>
-        <div class="photo-grid">
-            <img src="https://github.com/SalveneR/salvenr/commit/9d17e0454a2830593174e832b715d570c1e161e2#commitcomment-147605138" alt="alexzander">
-            <img src="photo2.jpg" alt="bob marly ">
-            <img src="https://drive.google.com/file/d/1BnkYKlofhI4ng4POTzbJ_2HjD_V9tHUJ/view?usp=sharing" alt="3D Model 3">
-            <!-- Add more images as needed -->
+  <main>
+    <section class="hero">
+      <div class="hero-grid shell">
+        <div class="hero-copy">
+          <p class="eyebrow">PRECAST CONCRETE · STEAM CURING · DIGITAL TRACEABILITY</p>
+          <h1>Control the cure.<br><span>Prove the result.</span></h1>
+          <p class="hero-lead">
+            SALVENR turns steam curing from an operator-dependent process into a controlled,
+            visible and traceable production cycle — with live temperatures, repeatable recipes,
+            alarms, history and digital QA records.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#demo">Run the Live Demo</a>
+            <a class="button ghost" href="#product">Explore SALVENR</a>
+          </div>
+          <div class="hero-proof">
+            <div><strong>Dual-probe</strong><span>temperature monitoring</span></div>
+            <div><strong>Recipe-based</strong><span>ramp · hold · cooldown</span></div>
+            <div><strong>Digital</strong><span>history & reporting</span></div>
+          </div>
         </div>
+
+        <div class="hero-product">
+          <div class="device-glow"></div>
+          <div class="device-frame device-mini" aria-hidden="true">
+            <div class="device-topline">
+              <span>SALVENR CURING CONTROLLER 01</span>
+              <span class="online">STATUS: CURING</span>
+            </div>
+            <div class="mini-grid">
+              <div class="mini-temp"><small>CONCRETE 1</small><b>54.8°</b><span>↗ +0.4°C</span></div>
+              <div class="mini-temp"><small>CONCRETE 2</small><b>53.9°</b><span>↗ +0.3°C</span></div>
+              <div class="mini-temp"><small>CHAMBER AIR</small><b>61.2°</b><span>TARGET 60.0°C</span></div>
+            </div>
+            <div class="mini-lower">
+              <div class="mini-chart">
+                <svg viewBox="0 0 500 190" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="heroFill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#71ff45" stop-opacity=".18"/>
+                      <stop offset="100%" stop-color="#71ff45" stop-opacity="0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0 160 C70 150,120 125,175 94 S270 46,335 48 S410 72,500 66 L500 190 L0 190Z" fill="url(#heroFill)"/>
+                  <path d="M0 160 C70 150,120 125,175 94 S270 46,335 48 S410 72,500 66" fill="none" stroke="#59b4ff" stroke-width="3"/>
+                  <path d="M0 170 C70 156,120 136,175 104 S270 55,335 57 S410 78,500 73" fill="none" stroke="#64ff3c" stroke-width="3"/>
+                  <path d="M0 150 C70 130,120 83,175 42 S250 30,310 50 S410 55,500 55" fill="none" stroke="#e9ad41" stroke-width="3"/>
+                </svg>
+              </div>
+              <div class="mini-side">
+                <div><small>CURE PROGRESS</small><b>63%</b></div>
+                <div class="mini-steam"><small>STEAM OUTPUT</small><b>ON</b><i></i></div>
+              </div>
+            </div>
+          </div>
+          <div class="product-caption">
+            <img src="assets/salvenr-logo.png" alt="">
+            <div><strong>Industrial control. Clear operator decisions.</strong><span>Designed around the real curing process.</span></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
-        <p>Email us directly at <a href="mailto:salvenr3d@gmail.com">salvenr3d@gmail.com</a></p>
+    <section class="trust-strip">
+      <div class="shell trust-grid">
+        <span>Designed for precast production</span>
+        <span>Local control capability</span>
+        <span>CSV cycle logging</span>
+        <span>Expandable I/O architecture</span>
+        <span>Operator-first interface</span>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Salven 3D Printing</p>
-    </footer>
+    <section class="section shell" id="product">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">THE PRODUCT</p>
+          <h2>A curing controller built around production reality.</h2>
+        </div>
+        <p>
+          SALVENR brings the information an operator needs onto one screen: actual concrete temperature,
+          chamber temperature, target, cure stage, steam state, progress and system health.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card featured">
+          <span class="feature-number">01</span>
+          <h3>Repeatable curing recipes</h3>
+          <p>Control preheat, ramp, hold and cooldown stages with defined temperature targets and timing.</p>
+          <div class="recipe-visual">
+            <span>PREHEAT</span><span>RAMP</span><span>HOLD</span><span>COOL</span>
+            <div class="recipe-line"></div>
+          </div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-number">02</span>
+          <h3>Dual-probe confidence</h3>
+          <p>Compare independent concrete temperature readings and flag disagreement or sensor failure.</p>
+          <div class="sensor-pair"><i></i><i></i><b>Δ 0.9°C</b></div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-number">03</span>
+          <h3>Steam on demand</h3>
+          <p>Issue steam demand from the curing recipe rather than relying on continuous manual adjustment.</p>
+          <div class="steam-pill"><i></i> STEAM ENABLED</div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-number">04</span>
+          <h3>Cycle traceability</h3>
+          <p>Keep product, timing, temperatures, alarms and operator actions together as a digital curing record.</p>
+          <div class="log-lines"><i></i><i></i><i></i><i></i></div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-number">05</span>
+          <h3>Fast operator decisions</h3>
+          <p>See immediately whether the cure is healthy, whether steam is on and whether action is required.</p>
+          <div class="decision-row"><b>CURING</b><span>HEALTHY</span></div>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-number">06</span>
+          <h3>Expandable architecture</h3>
+          <p>RS485 field modules make it possible to scale temperature, relay and future analogue I/O as the system grows.</p>
+          <div class="nodes"><i></i><em></em><i></i><em></em><i></i></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section problem-section">
+      <div class="shell problem-grid">
+        <div>
+          <p class="eyebrow">WHY IT MATTERS</p>
+          <h2>Steam curing should not depend on memory and guesswork.</h2>
+          <p class="section-copy">
+            In a busy precast factory, manual steam control can make curing dependent on shift experience,
+            timing and frequent checks. SALVENR gives the operator a defined process and gives QA a record of what actually happened.
+          </p>
+        </div>
+        <div class="before-after">
+          <div class="ba-card before">
+            <span>WITHOUT SALVENR</span>
+            <ul>
+              <li>Manual valve decisions</li>
+              <li>Limited temperature visibility</li>
+              <li>Hard-to-find cure records</li>
+              <li>Operator-to-operator variation</li>
+            </ul>
+          </div>
+          <div class="ba-arrow">→</div>
+          <div class="ba-card after">
+            <span>WITH SALVENR</span>
+            <ul>
+              <li>Defined curing recipe</li>
+              <li>Live concrete & chamber trends</li>
+              <li>Digital cycle history</li>
+              <li>Clear alarms & system status</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demo">
+      <div class="shell">
+        <div class="section-heading demo-heading">
+          <div>
+            <p class="eyebrow">INTERACTIVE PRODUCT DEMONSTRATION</p>
+            <h2>Operate the SALVENR HMI.</h2>
+            <p>This sales demo mirrors the real controller layout. Start a cure, watch the thermal profile develop, pause steam, inspect history and adjust the demonstration recipe.</p>
+          </div>
+          <div class="demo-actions">
+            <button class="button primary" id="startDemo">Start Demo Cure</button>
+            <button class="button ghost" id="resetDemo">Reset</button>
+          </div>
+        </div>
+
+        <div class="hmi-bezel">
+          <div class="hmi" id="hmi">
+            <div class="hmi-header">
+              <div>
+                <strong>CURING CONTROLLER 01</strong>
+                <small><span id="modeLabel">AUTO MODE</span> &nbsp;|&nbsp; CYCLE <span id="cycleRef">DEMO-001</span></small>
+              </div>
+              <div class="header-status">
+                <b id="overallStatus">STATUS: READY</b>
+                <span id="hmiClock">12:43</span>
+              </div>
+            </div>
+
+            <div class="hmi-main">
+              <div class="hmi-left">
+                <div class="temperature-row">
+                  <div class="temp-card">
+                    <span>CONCRETE 1</span>
+                    <div><b id="concrete1">24.2</b><em>°C</em></div>
+                    <small id="trend1">— stable</small>
+                  </div>
+                  <div class="temp-card">
+                    <span>CONCRETE 2</span>
+                    <div><b id="concrete2">24.0</b><em>°C</em></div>
+                    <small id="trend2">— stable</small>
+                  </div>
+                  <div class="temp-card">
+                    <span>CHAMBER AIR</span>
+                    <div><b id="chamberAir">25.1</b><em>°C</em></div>
+                    <small>TARGET <span id="targetTemp">60.0</span>°C</small>
+                  </div>
+                </div>
+
+                <div class="trend-panel">
+                  <div class="panel-title-row">
+                    <strong>TEMPERATURE TREND · LAST 6 HOURS</strong>
+                    <div class="legend">
+                      <span class="c1">C1</span>
+                      <span class="c2">C2</span>
+                      <span class="air">AIR</span>
+                      <span class="target">TARGET</span>
+                    </div>
+                  </div>
+                  <canvas id="trendChart"></canvas>
+                  <div class="chart-scale"><span>0h</span><span>2h</span><span>4h</span><span>6h</span></div>
+                </div>
+              </div>
+
+              <aside class="hmi-side">
+                <div class="side-panel progress-panel">
+                  <span>CURE PROGRESS</span>
+                  <div class="progress-time">
+                    <b id="elapsed">00:00:00</b>
+                    <small><strong id="remaining">06:00:00</strong> LEFT</small>
+                  </div>
+                  <div class="hmi-progress"><i id="progressFill"></i></div>
+                  <div class="stage-row"><span>STAGE: <b id="stageLabel">READY</b></span><strong id="progressPct">0%</strong></div>
+                </div>
+
+                <div class="side-panel steam-panel">
+                  <span>STEAM OUTPUT</span>
+                  <div class="steam-state">
+                    <b id="steamState">OFF</b>
+                    <i id="steamLamp"></i>
+                  </div>
+                  <div class="steam-buttons">
+                    <button id="manualOff">MANUAL OFF</button>
+                    <button class="danger" id="stopCure">STOP CURE</button>
+                  </div>
+                </div>
+
+                <div class="side-panel system-panel">
+                  <span>SYSTEM</span>
+                  <dl>
+                    <div><dt>DATA LOGGING</dt><dd id="logStatus">READY</dd></div>
+                    <div><dt>THERMOCOUPLES</dt><dd>3 / 3 OK</dd></div>
+                    <div><dt>TEMP MODULE</dt><dd>ONLINE</dd></div>
+                    <div><dt>RELAY MODULE</dt><dd>ONLINE</dd></div>
+                    <div><dt>SD CARD</dt><dd>OK</dd></div>
+                  </dl>
+                </div>
+
+                <div class="hmi-nav">
+                  <button id="historyBtn">HISTORY</button>
+                  <button id="settingsBtn">SETTINGS</button>
+                </div>
+              </aside>
+            </div>
+
+            <div class="hmi-modal" id="historyModal" aria-hidden="true">
+              <div class="modal-card">
+                <div class="modal-title"><strong>CYCLE HISTORY</strong><button data-close>×</button></div>
+                <table>
+                  <thead><tr><th>Cycle</th><th>Product</th><th>Max</th><th>Hold</th><th>Result</th></tr></thead>
+                  <tbody>
+                    <tr><td>HB-026</td><td>Class 6 Pipe</td><td>61.4°C</td><td>4:02</td><td class="pass">PASS</td></tr>
+                    <tr><td>BC-114</td><td>Box Culvert</td><td>60.8°C</td><td>4:00</td><td class="pass">PASS</td></tr>
+                    <tr><td>MH-318</td><td>Manhole Base</td><td>59.9°C</td><td>3:59</td><td class="pass">PASS</td></tr>
+                  </tbody>
+                </table>
+                <p>Cycle files can be retained as CSV records and used to build QA reports.</p>
+              </div>
+            </div>
+
+            <div class="hmi-modal" id="settingsModal" aria-hidden="true">
+              <div class="modal-card settings-card">
+                <div class="modal-title"><strong>DEMO RECIPE SETTINGS</strong><button data-close>×</button></div>
+                <label>Target temperature <span><input id="settingTarget" type="number" value="60" min="40" max="80" step="0.5"> °C</span></label>
+                <label>Ramp limit <span><input id="settingRamp" type="number" value="12" min="1" max="30"> °C/hr</span></label>
+                <label>Hold time <span><input id="settingHold" type="number" value="4" min="0.5" max="12" step="0.5"> hr</span></label>
+                <label>Cycle reference <span><input id="settingCycle" type="text" value="DEMO-001"></span></label>
+                <button class="button primary modal-save" id="saveSettings">Apply Demo Settings</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="demo-note">Interactive website demonstration. Values are simulated to demonstrate the operator experience and are not live plant measurements.</p>
+      </div>
+    </section>
+
+    <section class="section shell" id="use-cases">
+      <div class="section-heading">
+        <p class="eyebrow">USE CASES</p>
+        <h2>One control concept. Multiple precast processes.</h2>
+        <p>Configure the cure around the product and production method instead of forcing every product into the same cycle.</p>
+      </div>
+
+      <div class="use-case-grid">
+        <article class="use-case">
+          <div class="uc-graphic pipe"><i></i></div>
+          <div><span>01</span><h3>Jacking & large-diameter pipe</h3><p>Track concrete temperature through long steam cures and retain a traceable record for each production cycle.</p></div>
+        </article>
+        <article class="use-case">
+          <div class="uc-graphic culvert"><i></i></div>
+          <div><span>02</span><h3>Box culverts & heavy precast</h3><p>Apply controlled ramp rates to reduce thermal shock while maintaining production-focused cure times.</p></div>
+        </article>
+        <article class="use-case">
+          <div class="uc-graphic chamber"><i></i></div>
+          <div><span>03</span><h3>Dedicated curing chambers</h3><p>Give operators a clear chamber status with target, actual temperature, progress and steam demand visible at once.</p></div>
+        </article>
+        <article class="use-case">
+          <div class="uc-graphic match"><i></i></div>
+          <div><span>04</span><h3>Match curing · Professional</h3><p>Planned advanced architecture can reproduce the product thermal profile in a separate test-cylinder curing bath.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section architecture-section">
+      <div class="shell architecture-grid">
+        <div>
+          <p class="eyebrow">SYSTEM ARCHITECTURE</p>
+          <h2>Industrial I/O without an industrially complicated interface.</h2>
+          <p class="section-copy">
+            The touchscreen acts as the operator interface and control layer, while field modules handle
+            thermocouples, relays and optional analogue signals over RS485.
+          </p>
+          <a class="text-link" href="#specs">View technical specifications →</a>
+        </div>
+        <div class="architecture-diagram">
+          <div class="arch-node sensor-node"><small>FIELD</small><strong>K-TYPE PROBES</strong><span>Concrete · Chamber</span></div>
+          <div class="arch-line"></div>
+          <div class="arch-node core-node"><img src="assets/salvenr-logo.png" alt=""><strong>SALVENR HMI</strong><span>Control · UI · Logging</span></div>
+          <div class="arch-line"></div>
+          <div class="arch-node output-node"><small>OUTPUT</small><strong>STEAM ENABLE</strong><span>Relay / future 4–20 mA</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section report-section">
+      <div class="shell report-grid">
+        <div class="report-preview">
+          <div class="report-page">
+            <div class="report-head"><span>SALVENR</span><b>CURING CYCLE REPORT</b></div>
+            <div class="report-meta">
+              <div><small>PRODUCT</small><b>Class 6 Jacking Pipe</b></div>
+              <div><small>CYCLE</small><b>HB-026</b></div>
+              <div><small>RESULT</small><b class="ok">PASS</b></div>
+            </div>
+            <svg viewBox="0 0 520 180" preserveAspectRatio="none">
+              <path d="M5 160 C60 156,90 132,130 110 S210 58,280 62 S360 70,515 72" fill="none" stroke="#57aaef" stroke-width="4"/>
+              <path d="M5 166 C70 160,100 140,145 116 S220 66,285 68 S370 76,515 77" fill="none" stroke="#61d34c" stroke-width="4"/>
+              <path d="M5 150 C80 130,110 77,170 42 S270 34,325 55 S430 60,515 60" fill="none" stroke="#e3a43a" stroke-width="4"/>
+            </svg>
+            <div class="report-bottom"><span>MAX 61.4°C</span><span>HOLD 4:02</span><span>ALARMS 0</span></div>
+          </div>
+        </div>
+
+        <div>
+          <p class="eyebrow">DIGITAL QA RECORDS</p>
+          <h2>Make the curing cycle part of the product record.</h2>
+          <p class="section-copy">
+            SALVENR is designed to log the temperatures and events that matter so a completed cure can be reviewed later
+            instead of relying on handwritten notes or memory.
+          </p>
+          <ul class="check-list">
+            <li>Concrete and chamber temperature history</li>
+            <li>Target temperature and cure stage</li>
+            <li>Steam demand and operator actions</li>
+            <li>Alarm and sensor status</li>
+            <li>CSV export for QA review</li>
+          </ul>
+          <a class="button ghost" href="sample-report.html">View Sample Report</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pro-section">
+      <div class="shell pro-card">
+        <div class="pro-label">SALVENR <b>PROFESSIONAL</b></div>
+        <div class="pro-grid">
+          <div>
+            <p class="eyebrow">ADVANCED PLATFORM</p>
+            <h2>Built with room to grow.</h2>
+            <p>Professional features are intended for applications that need deeper process control, analytics or test correlation.</p>
+          </div>
+          <div class="pro-features">
+            <span><i>01</i>4–20 mA modulating steam valve control</span>
+            <span><i>02</i>Concrete maturity calculations</span>
+            <span><i>03</i>Match-curing architecture</span>
+            <span><i>04</i>Plant-level network monitoring</span>
+            <span><i>05</i>Advanced diagnostics & analytics</span>
+            <span><i>06</i>Expanded reporting workflows</span>
+          </div>
+        </div>
+        <small>Professional features shown are advanced/optional capabilities and may depend on final hardware configuration.</small>
+      </div>
+    </section>
+
+    <section class="section app-section" id="app">
+      <div class="shell app-grid">
+        <div class="phone-wrap">
+          <div class="phone">
+            <div class="phone-top"></div>
+            <div class="phone-screen">
+              <img src="assets/salvenr-logo.png" alt="">
+              <small>SALVENR MOBILE</small>
+              <h3>Plant overview</h3>
+              <div class="phone-status"><span></span><b>Controller 01</b><em>CURING</em></div>
+              <div class="phone-reading"><small>CONCRETE AVG</small><b>54.4°C</b></div>
+              <div class="phone-reading"><small>TARGET</small><b>60.0°C</b></div>
+              <div class="phone-mini-progress"><i></i></div>
+              <button>VIEW CYCLE</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="eyebrow">ANDROID COMPANION APP</p>
+          <h2>Take the SALVENR demonstration with you.</h2>
+          <p class="section-copy">
+            The Android companion app provides a mobile way to present the product, review cycle information and support future connected workflows.
+          </p>
+          <div class="app-badges">
+            <div><b>ANDROID</b><span>APK download</span></div>
+            <div><b>MOBILE</b><span>phone & tablet</span></div>
+          </div>
+          <a class="button primary" href="https://github.com/SalveneR/salvenr/releases/latest/download/SALVENR.apk">Download Android APK</a>
+          <p class="download-note">The download becomes active when <strong>SALVENR.apk</strong> is attached to the latest GitHub Release.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="specs">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">TECHNICAL OVERVIEW</p>
+          <h2>Built on practical industrial hardware.</h2>
+        </div>
+        <p>Final I/O count and field hardware can be configured to suit the curing application.</p>
+      </div>
+      <div class="spec-grid">
+        <div class="spec-row"><span>Operator interface</span><b>7-inch 1024 × 600 capacitive touchscreen</b></div>
+        <div class="spec-row"><span>Main controller</span><b>ESP32-S3 HMI platform</b></div>
+        <div class="spec-row"><span>Temperature inputs</span><b>K-type thermocouple field module</b></div>
+        <div class="spec-row"><span>Field communications</span><b>RS485 · Modbus RTU</b></div>
+        <div class="spec-row"><span>Steam output</span><b>Dry-contact relay enable / demand</b></div>
+        <div class="spec-row"><span>Logging</span><b>CSV cycle data · local storage</b></div>
+        <div class="spec-row"><span>Control stages</span><b>Preheat · Ramp · Hold · Cooldown</b></div>
+        <div class="spec-row"><span>Expansion path</span><b>Analogue input/output · network monitoring</b></div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="shell contact-card">
+        <div>
+          <p class="eyebrow">REQUEST A DEMONSTRATION</p>
+          <h2>See how SALVENR could fit your curing process.</h2>
+          <p>For precast manufacturers, production teams and QA teams exploring better control and traceability of steam curing.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:salvenr3d@gmail.com?subject=SALVENR%20Curing%20Controller%20Demo%20Enquiry">Email SALVENR</a>
+          <a class="button ghost" href="#demo">Run Demo Again</a>
+          <span>salvenr3d@gmail.com</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div class="brand footer-brand">
+        <img src="assets/salvenr-logo.png" alt="SALVENR logo">
+        <span><strong>SALVENR</strong><small>CURING CONTROL SYSTEM</small></span>
+      </div>
+      <p>Intelligent curing control for precast concrete.</p>
+      <p>© <span id="year"></span> SALVENR. Product demonstration website.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
