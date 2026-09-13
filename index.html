@@ -21,6 +21,7 @@
       <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
       <nav class="nav-links" id="navLinks">
         <a href="#product">Product</a>
+        <a href="#story">Story</a>
         <a href="#demo">Live Demo</a>
         <a href="#use-cases">Use Cases</a>
         <a href="#app">Android App</a>
@@ -157,7 +158,7 @@
         <article class="feature-card">
           <span class="feature-number">06</span>
           <h3>Expandable architecture</h3>
-          <p>RS485 field modules make it possible to scale temperature, relay and future analogue I/O as the system grows.</p>
+          <p>The modular SALVENR architecture allows temperature sensing, steam-control outputs and future process I/O to grow with the installation.</p>
           <div class="nodes"><i></i><em></em><i></i><em></em><i></i></div>
         </article>
       </div>
@@ -192,6 +193,78 @@
               <li>Digital cycle history</li>
               <li>Clear alarms & system status</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section founder-section" id="story">
+      <div class="shell founder-grid">
+        <div class="founder-copy">
+          <p class="eyebrow">WHY I BUILT SALVENR</p>
+          <h2>Built from a problem I kept running into on the factory floor.</h2>
+
+          <p class="founder-lead">
+            I’m a mechanical engineer with a hands-on background in machining, maintenance and production engineering.
+            I’ve spent years working around precast concrete manufacturing, where curing is critical to quality,
+            cycle time and getting product out the door.
+          </p>
+
+          <p>
+            One problem kept coming back: the control systems available to us were often either too expensive,
+            difficult for operators to use, locked into rigid industrial HMI platforms, or tied to ongoing software
+            and subscription costs that were hard to justify for a straightforward curing process.
+          </p>
+
+          <p>
+            I wanted something different — a controller that an operator could understand in seconds, that could
+            show the information that actually matters, log the full cure, and still be flexible enough to grow
+            with the process.
+          </p>
+
+          <blockquote>
+            “SALVENR started because I wanted the kind of curing controller I kept looking for but could never quite find:
+            simple to operate, practical to maintain, and built around what happens in a real precast factory.”
+          </blockquote>
+
+          <p>
+            So I started building it myself. SALVENR has grown from a practical factory problem into a complete
+            curing-control concept: temperature monitoring, repeatable recipes, steam control, cycle history,
+            reporting and a platform that can keep developing without forcing the customer into an unnecessary
+            monthly software bill.
+          </p>
+
+          <div class="founder-signoff">
+            <span>FOUNDER & PRODUCT DEVELOPER</span>
+            <strong>Robert Salvenmoser</strong>
+            <small>Mechanical / Production Engineering · Precast Manufacturing</small>
+          </div>
+        </div>
+
+        <div class="story-rail">
+          <div class="story-card">
+            <span>01</span>
+            <strong>Factory experience first</strong>
+            <p>Designed around the realities of production, maintenance, QA and operator use.</p>
+          </div>
+
+          <div class="story-card">
+            <span>02</span>
+            <strong>Simple by design</strong>
+            <p>The main screen is built to answer the questions an operator actually needs answered during a cure.</p>
+          </div>
+
+          <div class="story-card">
+            <span>03</span>
+            <strong>Keep ownership of the system</strong>
+            <p>Local control and local data remain central to the SALVENR concept, without making basic operation dependent on a cloud service.</p>
+          </div>
+
+          <div class="story-card accent-story">
+            <span>04</span>
+            <strong>Built to keep improving</strong>
+            <p>From simple relay steam control through to reporting, match curing and advanced process control.</p>
           </div>
         </div>
       </div>
@@ -365,17 +438,17 @@
           <p class="eyebrow">SYSTEM ARCHITECTURE</p>
           <h2>Industrial I/O without an industrially complicated interface.</h2>
           <p class="section-copy">
-            The touchscreen acts as the operator interface and control layer, while field modules handle
-            thermocouples, relays and optional analogue signals over RS485.
+            The SALVENR touchscreen provides the operator interface and control layer, while dedicated industrial I/O handles temperature sensing, steam control and future process signals.
           </p>
-          <a class="text-link" href="#specs">View technical specifications →</a>
+          <p class="product-ip-note">SALVENR is supplied as a complete engineered control solution. Internal controller architecture and firmware are proprietary.</p>
+          <a class="text-link" href="#specs">View technical overview →</a>
         </div>
         <div class="architecture-diagram">
-          <div class="arch-node sensor-node"><small>FIELD</small><strong>K-TYPE PROBES</strong><span>Concrete · Chamber</span></div>
+          <div class="arch-node sensor-node"><small>FIELD</small><strong>TEMPERATURE PROBES</strong><span>Concrete · Chamber · Process</span></div>
           <div class="arch-line"></div>
           <div class="arch-node core-node"><img src="assets/salvenr-logo.png" alt=""><strong>SALVENR HMI</strong><span>Control · UI · Logging</span></div>
           <div class="arch-line"></div>
-          <div class="arch-node output-node"><small>OUTPUT</small><strong>STEAM ENABLE</strong><span>Relay / future 4–20 mA</span></div>
+          <div class="arch-node output-node"><small>OUTPUT</small><strong>STEAM ENABLE</strong><span>Steam-control interface</span></div>
         </div>
       </div>
     </section>
@@ -428,7 +501,7 @@
             <p>Professional features are intended for applications that need deeper process control, analytics or test correlation.</p>
           </div>
           <div class="pro-features">
-            <span><i>01</i>4–20 mA modulating steam valve control</span>
+            <span><i>01</i>Modulating steam valve control</span>
             <span><i>02</i>Concrete maturity calculations</span>
             <span><i>03</i>Match-curing architecture</span>
             <span><i>04</i>Plant-level network monitoring</span>
@@ -477,19 +550,19 @@
       <div class="section-heading split-heading">
         <div>
           <p class="eyebrow">TECHNICAL OVERVIEW</p>
-          <h2>Built on practical industrial hardware.</h2>
+          <h2>Purpose-built for industrial curing control.</h2>
         </div>
-        <p>Final I/O count and field hardware can be configured to suit the curing application.</p>
+        <p>System configuration can be tailored to suit the curing application.</p>
       </div>
       <div class="spec-grid">
-        <div class="spec-row"><span>Operator interface</span><b>7-inch 1024 × 600 capacitive touchscreen</b></div>
-        <div class="spec-row"><span>Main controller</span><b>ESP32-S3 HMI platform</b></div>
-        <div class="spec-row"><span>Temperature inputs</span><b>K-type thermocouple field module</b></div>
-        <div class="spec-row"><span>Field communications</span><b>RS485 · Modbus RTU</b></div>
-        <div class="spec-row"><span>Steam output</span><b>Dry-contact relay enable / demand</b></div>
-        <div class="spec-row"><span>Logging</span><b>CSV cycle data · local storage</b></div>
+        <div class="spec-row"><span>Operator interface</span><b>Industrial colour touchscreen HMI</b></div>
+        <div class="spec-row"><span>Control platform</span><b>SALVENR proprietary control system</b></div>
+        <div class="spec-row"><span>Temperature monitoring</span><b>Multiple concrete and chamber temperature inputs</b></div>
+        <div class="spec-row"><span>Communications</span><b>Industrial field communications architecture</b></div>
+        <div class="spec-row"><span>Steam control</span><b>Isolated steam-control interface</b></div>
+        <div class="spec-row"><span>Logging</span><b>Local cycle records and CSV export</b></div>
         <div class="spec-row"><span>Control stages</span><b>Preheat · Ramp · Hold · Cooldown</b></div>
-        <div class="spec-row"><span>Expansion path</span><b>Analogue input/output · network monitoring</b></div>
+        <div class="spec-row"><span>Expansion path</span><b>Additional sensing · valve control · network monitoring</b></div>
       </div>
     </section>
 

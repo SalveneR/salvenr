@@ -22,3 +22,8 @@ Publish a GitHub Release with a file named exactly `SALVENR.apk` to activate it.
 ## Demo
 
 The embedded HMI is intentionally a sales simulation. It demonstrates the operator experience without requiring physical hardware.
+
+
+## Product positioning
+
+The public website intentionally describes SALVENR at product level. Internal controller hardware, firmware architecture and component-level implementation details are not published on the sales site.
